@@ -10,7 +10,7 @@ public class EmpController {
 		public String loginPage() {
 			
 			return "emp/login";
-		}
+	}
 	
 	
 	@RequestMapping(value="main.do")
