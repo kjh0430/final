@@ -38,8 +38,6 @@
     				+'&addressType=A02&callback=result',
     			success:function(result){
     				console.log(result);
-    				
-    				
     			}
     			
     			
@@ -407,9 +405,7 @@
             </div>
           </div>
           <!-- end of row -->
-          <div class="row" id="weather" style="width:100%;height:500px;">
-          	
-          </div>
+          
 		</div>
          
         <!-- /page content -->
