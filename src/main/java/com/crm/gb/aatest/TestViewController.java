@@ -15,4 +15,9 @@ public class TestViewController {
 		
 		return "client/poList_detail";
 	}
+	
+	public String TestView3() {
+		
+		return "client/poList_detail2";
+	}
 }
