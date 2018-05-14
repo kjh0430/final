@@ -10,7 +10,7 @@
 		</layout>
 	</appender>
 	
-	<!-- Application Loggers 11-->
+	<!-- Application Loggers -->
 	<logger name="com.crm.gb">
 		<level value="info" />
 	</logger>
