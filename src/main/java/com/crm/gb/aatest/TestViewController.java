@@ -15,4 +15,10 @@ public class TestViewController {
 		
 		return "client/poList_detail";
 	}
+	
+	//방문일지 페이지 이동
+	@RequestMapping("visit.do")
+	public String dailyworkView() {
+		return "dailyreport/visit";
+	}
 }
