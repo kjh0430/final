@@ -8,14 +8,11 @@ public class EmpController {
 
 	@RequestMapping(value="login.do")
 		public String loginPage() {
-			
 			return "emp/login";
 	}
 	
-	
 	@RequestMapping(value="main.do")
-	public String main() {
-		
+	public String main() {		
 		return "main";
 	}
 	
