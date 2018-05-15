@@ -21,4 +21,9 @@ public class TestViewController {
 	public String dailyworkView() {
 		return "dailyreport/visit";
 	}
+	
+	public String TestView3() {
+		
+		return "client/poList_detail2";
+	}
 }

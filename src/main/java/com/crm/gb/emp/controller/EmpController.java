@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class EmpController {
 
 	@RequestMapping(value="login.do")
-		public String loginPage() {
-			
+		public String loginPage() {			
 			return "emp/login";
 		}
 	

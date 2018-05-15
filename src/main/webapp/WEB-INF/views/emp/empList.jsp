@@ -158,7 +158,7 @@ $(document).ready(function() {
 							<div class="x_panel">
 								<div class="x_title">
 									<h2>
-										사원관리
+										사원관리111
 									</h2>
 									<div class="clearfix"></div>
 								</div>

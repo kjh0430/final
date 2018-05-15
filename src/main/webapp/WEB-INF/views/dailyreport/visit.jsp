@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ tablib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,8 +140,10 @@
 							<h3>방문일지</h3>
 						</div>
 					</div>
+					
 					<div class="clearfix"></div>
-					<!-- map start -->
+					
+					<!-- map start -->				
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div id="map" style="height: 400px"></div>
@@ -168,7 +171,7 @@
 										<div class="form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">방문시간</label>
 											<div class="col-md-9 col-sm-9 col-xs-12">
-												<input type="date" class="form-control" readonly="readonly">
+												<input type="time" class="form-control">
 											</div>
 										</div>
 										<div class="form-group">
@@ -213,13 +216,46 @@
 	<script type="text/javascript">
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 		mapOption = {
-			center : new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+			center : new daum.maps.LatLng(37.494088, 127.035238), // 지도의 중심좌표
 			level : 3
 		// 지도의 확대 레벨
 		};
 
 		// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 		var map = new daum.maps.Map(mapContainer, mapOption);
+		
+		 
+		// 버튼을 클릭하면 아래 배열의 좌표들이 모두 보이게 지도 범위를 재설정합니다 
+		/* var points = [
+		    new daum.maps.LatLng(37.494088, 127.035238),
+		    new daum.maps.LatLng(37.506106, 127.041246),
+		    new daum.maps.LatLng(37.503416, 127.034337)
+		]; */
+		
+	
+		var points = [
+			
+		
+		];
+
+		// 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+		var bounds = new daum.maps.LatLngBounds();    
+
+		var i, marker;
+		for (i = 0; i < points.length; i++) {
+		    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
+		    marker =     new daum.maps.Marker({ position : points[i] });
+		    marker.setMap(map);
+		    
+		    // LatLngBounds 객체에 좌표를 추가합니다
+		    bounds.extend(points[i]);
+		}
+
+		function setBounds() {
+		    // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
+		    // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
+		    map.setBounds(bounds);
+		}
 	</script>
 
 </body>
