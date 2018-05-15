@@ -7,7 +7,7 @@ public class TestViewController {
 	
 	@RequestMapping("testView.do")
 	public String TestView() {
-		
+		int i=1;
 		return "client/poList";
 	}
 	@RequestMapping("testView2.do")
