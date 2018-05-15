@@ -2,7 +2,12 @@ package com.crm.gb.dailywork.model.vo;
 
 import java.util.Date;
 
-public class Dailywork {
+import org.springframework.stereotype.Component;
+
+@Component("dailywork")
+public class Dailywork implements java.io.Serializable{
+	
+	private static final long serialVersionUID = 1111L;
 
 	private int dailyworkNo;
 	private int clientNo;

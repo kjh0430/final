@@ -17,7 +17,7 @@ public class TestViewController {
 	}
 	
 	//방문일지 페이지 이동
-	@RequestMapping("visit.do")
+	@RequestMapping("workvisit.do")
 	public String dailyworkView() {
 		return "dailyreport/visit";
 	}
